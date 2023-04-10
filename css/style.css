@@ -1,39 +1,52 @@
-/* roboto-regular - cyrillic_latin */
+/* roboto-regular - cyrillic */
 @font-face {
     font-display: swap;
     /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    src: url('../fonts/roboto-v30-cyrillic_latin-regular.woff2') format('woff2'),
+    src: url('../fonts/roboto-v30-cyrillic-regular.woff2') format('woff2'),
         /* Chrome 36+, Opera 23+, Firefox 39+ */
-        url('../fonts/roboto-v30-cyrillic_latin-regular.woff') format('woff');
+        url('../fonts/roboto-v30-cyrillic-regular.woff') format('woff');
     /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-/* roboto-500 - cyrillic_latin */
+/* roboto-500 - cyrillic */
 @font-face {
     font-display: swap;
     /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
-    src: url('../fonts/roboto-v30-cyrillic_latin-500.woff2') format('woff2'),
+    src: url('./fonts/roboto-v30-cyrillic-500.woff2') format('woff2'),
         /* Chrome 36+, Opera 23+, Firefox 39+ */
-        url('../fonts/roboto-v30-cyrillic_latin-500.woff') format('woff');
+        url('./fonts/roboto-v30-cyrillic-500.woff') format('woff');
     /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-/* roboto-700 - cyrillic_latin */
+/* roboto-700 - cyrillic */
 @font-face {
     font-display: swap;
     /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
-    src: url('../fonts/roboto-v30-cyrillic_latin-700.woff2') format('woff2'),
+    src: url('../fonts/roboto-v30-cyrillic-700.woff2') format('woff2'),
         /* Chrome 36+, Opera 23+, Firefox 39+ */
-        url('../fonts/roboto-v30-cyrillic_latin-700.woff') format('woff');
+        url('../fonts/roboto-v30-cyrillic-700.woff') format('woff');
+    /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-900 - cyrillic */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    src: url('../fonts/roboto-v30-cyrillic-900.woff2') format('woff2'),
+        /* Chrome 36+, Opera 23+, Firefox 39+ */
+        url('../fonts/roboto-v30-cyrillic-900.woff') format('woff');
     /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
@@ -57,7 +70,6 @@ body {
 
 img {
     max-width: 100%;
-    height: 100%;
 }
 
 .wrapper {
@@ -70,9 +82,8 @@ img {
 
 .paravina {
     min-height: 100vh;
-    padding-bottom: 500px;
     background-size: cover;
-
+    padding: 0 50px 100px 50px;
 }
 
 .paravina::before {
@@ -83,37 +94,36 @@ img {
     top: 0;
     bottom: 0;
     z-index: -1;
-    background: url(/img/par-back.jpg) center / cover no-repeat;
+    background: url(../img/paravina-pic.jpg) center / cover no-repeat;
     filter: blur(5px);
 }
 
 
 .paravina__title {
+    font-family: 'Roboto';
     text-align: center;
     padding-top: 50px;
     font-size: 70px;
     line-height: 2.4;
-    margin-bottom: 120px;
+    margin-bottom: 80px;
     text-align: center;
-
 }
 
 .paravina__cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
+    padding-bottom: 100px;
 }
 
 .paravina__card {
-    justify-content: center;
-    min-width: 400px;
+    max-width: 450px;
 }
 
 .paravina__card--pic {
-    min-width: 140px;
-    margin-bottom: 20px;
-    padding: 0 200px 0 200px;
-    margin-right: 20px;
+    max-width: 320px;
+    padding: 0 100px 0 100px;
+    margin: 0 0 20px 50px;
 }
 
 .paravina__card--thumb {
@@ -121,19 +131,57 @@ img {
 }
 
 .paravina__card--title {
-    font-size: 50px;
-    line-height: 1.2;
+    font-family: 'Roboto';
+    font-size: 46px;
     margin-bottom: 10px;
     text-align: center;
     margin-right: 40px;
-
 }
+
 .paravina__card--desc {
-    font-size: 35px;
-    line-height: 1.2;
+    font-family: 'Roboto';
+    font-size: 26px;
     text-align: center;
     margin-right: 60px;
-    text-align: center;
 }
 
 /* Paravina styles starts*/
+
+/*Dental styles start*/
+
+
+.dental {
+    min-height: 100vh;
+    background-size: cover;
+}
+
+.dental-pic {
+    position: absolute;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+.dental__headline {
+    font-family: 'Roboto';
+    font-size: 62px;
+    line-height: 1.2;
+    text-align: center;
+    padding: 180px 400px 0 400px;
+}
+
+.element {
+    color: #FAC0AA;
+}
+
+.dental__subtitle {
+    font-family: 'Roboto';
+    font-size: 26px;
+    line-height: 1.2;
+    text-align: center;
+    margin-top: 100px;
+    padding: 0 220px;
+}
+
+
+
+/*Dental styles end*/
